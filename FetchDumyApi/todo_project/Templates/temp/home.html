@@ -1,0 +1,23 @@
+{% extends 'temp/header.html' %}
+
+{% block contain %}
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <th>UserId</th>
+        <th>Todo</th>
+        <th>Completed</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    {% for ob in obj_lis %}
+    <tr>
+        <td>{{ ob.userId }}</td>
+        <td>{{ ob.todo }}</td>
+        <td>{{ ob.completed }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}
